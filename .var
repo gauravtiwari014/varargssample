@@ -1,0 +1,31 @@
+public class VarArgsSample {
+	public void displayData(String studName,int score)
+	{
+		System.out.println("Student "+studName+" scored marks "+score);
+	}
+	
+	public void acceptStudentData(String studName,int score,String... subjects )
+	{
+		System.out.println("Student "+studName+" SCored "+score);
+		System.out.println("His Subjects are ...");
+		for(String subject: subjects)
+		{
+			System.out.println(subject);
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		VarArgsSample vars = new VarArgsSample();
+		//vars.displayData("Harsha", 85);
+		vars.acceptStudentData("Kiran Kumar", 87, "Java","VS.Net","Python");
+		System.out.println("---------------");
+		vars.acceptStudentData("Madan Kumar", 77, "C#","VS.Net","Ruby","AIML");
+		System.out.println("---------------");
+		vars.acceptStudentData("Mohan Kumar", 67, "PHP","VS.Net","Python","DSA","DSc");
+		System.out.println("---------------");
+		
+	}
+
+}
+
